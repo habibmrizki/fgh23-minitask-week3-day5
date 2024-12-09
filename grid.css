@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: lightcoral;
+}
+
+.container {
+  min-height: 80vh;
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2ox solid black;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(4, 1fr); */
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  grid-template-rows: repeat(4, minmax(50px, 1fr));
+  grid-template-areas:
+    "a c"
+    "b c"
+    "d d"
+    ". e";
+  gap: 10px 5px;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  position: relative;
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.one {
+  grid-area: a;
+  /* justify-self: center;
+  align-self: center; */
+}
+
+.two {
+  grid-area: c;
+}
+
+.three {
+  grid-area: b;
+}
+
+.four {
+  grid-area: d;
+}
+
+.five {
+  grid-area: e;
+}
